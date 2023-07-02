@@ -1,0 +1,71 @@
+/*import, pour pas surchargé le même css avec les mêmes styles*/
+/*syles par défauts... navbar et footer*/
+@import "/styles/external-libs/par-défaut.css";
+@import "/styles/external-libs/footer.css";
+@import "/styles/external-libs/navigation.css";
+/*fonts... */
+@import "/styles/external-libs/fonts.css";
+/*et enfin l'animation slide*/
+@import "/styles/external-libs/animation.css";
+
+/*First section*/
+#first{
+    background: url('/images/Wakanda/Pantherwakanda1.png') no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+.ville{
+    padding-top: 15%;
+    margin: 0 15%;
+    width: 30%;    
+}
+/*Second section*/
+#second{
+    display: flex;
+    background: url('/images/Wakanda/Pantherwakanda2.png') top center/100% no-repeat;
+    margin: 5%;
+    gap: 5%;
+    text-align: justify;
+}
+.personnage img{
+    width: 100%;
+}
+/*span enigme*/
+.titre h5{
+    font-family: 'Enigme';
+    color: #F2CEF2;
+}
+/*responsive*/
+@media screen and (max-width: 900px) {
+    /*First section*/
+    #first{
+        background-position: center;
+    }
+    .ville{
+        padding-top: 35%;
+        margin: 0 15%;
+        width: 80%;
+        text-align: center;    
+    }
+    /*Second section*/
+    #second{
+        display: block;
+        margin: 15% 5%;
+        text-align: justify;
+    }   
+}
+@media screen and (min-width: 500px) {
+    .ville{
+        padding-top: 25%;
+    } 
+}
+@media screen and (min-width: 900px){
+    .ville{
+        padding-top: 10%;
+    } 
+}
+@media screen and (min-width: 900px) and (max-width: 1100px){
+    .ville{
+        width: 40%;
+    } 
+}

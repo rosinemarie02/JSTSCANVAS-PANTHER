@@ -1,0 +1,24 @@
+nav, main, footer{
+    animation: entrer .7s ease-out;
+}
+.scroll{
+    animation: scroll .5s ease-out 1s;
+}
+@keyframes entrer {
+    0%{
+        transform: translateX(-15%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+@keyframes scroll {
+    0%{
+        transform: translateY(-35%);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+    }
+}

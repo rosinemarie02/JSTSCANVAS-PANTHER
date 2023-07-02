@@ -1,0 +1,79 @@
+/*style du footer*/
+footer{
+    background: url('/images/Allpages/back_footer.png') no-repeat;
+    background-size: cover;
+}
+.blocus{
+    display: flex;
+    justify-content: center;
+    padding-top: 10%;
+}
+.footer{
+    position: relative;
+}
+.sayna{
+    position: absolute;
+    top: 45%;
+    left: 45%;
+    transform: translate(-40%, -50%);
+}
+.gauche{
+    width: 50%;
+    text-align: center;
+}
+.droite{
+    width: 50%;
+}
+/*partie droite*/
+.haut{
+    display: flex;
+    gap: 15%;
+}
+.social{
+    text-align: center;
+}
+.social img{
+    margin: 0 1%;
+    transition: .25s transform ease-in-out;
+}
+.social img:hover{
+    transform: scale(1.1);
+}
+.copyright{
+    display: flex;
+    align-items: center;
+    padding: 10% 0;
+}
+.point{
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    margin: 0 5px;
+    background-color: #9E91B7;
+}
+/*fonts titre*/
+h5{
+    font-family: 'Texte';
+    font-size: 1.2em;
+    font-weight: normal;
+    letter-spacing: 7px;
+}
+.left a{
+    color: white;
+    transition: .5s all ease-in-out;
+}
+.left a:hover{
+    text-decoration: underline;
+}
+
+/*responsive*/
+@media screen and (max-width: 900px) {
+    .blocus{
+        display: block;
+        margin: 0 15%;
+    }
+    .gauche, .droite{
+        width: 100%;
+        justify-content: center;
+    }
+}

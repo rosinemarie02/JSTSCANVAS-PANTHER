@@ -1,0 +1,147 @@
+/*import, pour pas surchargé le même css avec les mêmes styles*/
+/*syles par défauts... navbar et footer*/
+@import "/styles/external-libs/par-défaut.css";
+@import "/styles/external-libs/footer.css";
+@import "/styles/external-libs/navigation.css";
+/*fonts... */
+@import "/styles/external-libs/fonts.css";
+/*et enfin l'animation slide*/
+@import "/styles/external-libs/animation.css";
+/*Première section*/
+#first{
+    background: url('/images/Enigme/Pantherenigme1.png') bottom left/50% no-repeat;
+    height: 100vh;
+}
+.titre{
+    font-size: 1.4em;
+    width: 80%;
+}
+.defi{
+    margin-left: 50%;
+    margin-right: 5%;
+    padding-top: 5%;
+}
+.texte{
+    background: url('/images/Enigme/Pantherenigme2.png') center/100% no-repeat;
+    padding: 5% 10%;
+}
+
+/*Séparation entre les deux section*/
+.separation img{
+    width: 90%;
+    margin: 15% 0;
+}
+
+/*seconde partie*/
+#second{
+    display: flex;
+    margin: 5%;
+}
+/*texte enigmatique*/
+.text-enigme{
+    color: #DF99F2;
+    font-size: 2.3em;
+}
+span{
+    font-family: 'Enigme';
+}
+/*partie gauche*/
+.transcription{
+    width: 70%;
+}
+.transcription span{
+    font-size: 1.1em;
+    padding: 0 5px;
+}
+.par-gauche{
+    width: 60%;
+}
+/*partie droite... le savais-tu*/
+.par-droite{
+    text-align: center;
+    align-items: center;
+    width: 40%;
+}
+.question{
+    background: url('/images/Enigme/Pantherenigme2.png') center/90% no-repeat;
+    padding: 5% 10%;
+}
+
+/*Partie droite encore... mais la section réponse*/
+.reponse{
+    width: 50%;
+}
+.reponse input{
+    background-color: transparent;
+    border: 2px solid #F2CEF2;
+    padding: 10px 15px;
+    border-radius: 30px;
+    width: 100%;
+}
+::placeholder{
+    color: #F2CEF2;
+}
+/**/
+.button{
+    text-align: center;
+}
+button{
+    background-color: #F2CEF2;
+    border: none;
+    border-radius: 20px;
+    padding: 4% 10%;
+    margin: 5% 0;
+    transition: .5s all ease-in-out;
+}
+button:hover{
+    filter: drop-shadow(0 0 7px #F2CEF2);
+}
+/*responsive*/
+@media screen and (max-width: 900px) {
+    /*Première section*/
+    #first{
+        background: url('/images/Enigme/Pantherenigme1.png') top center/60% no-repeat;
+    }
+    .titre{
+        padding-top: 20%;
+        font-size: 1.4em;
+        width: 60%;
+        margin: auto;
+        text-align: center;
+    }
+    .defi{
+        margin-left: 0%;
+    }
+    .texte{
+        text-align: center;
+        background: url('/images/Enigme/Pantherenigme2.png') center/70% no-repeat;
+        padding: 5% 10%;
+        margin: 5%;
+        font-size: .9em;
+    }
+    /*seconde partie*/
+    #second{
+        display: block;
+        margin: 5%;
+    }
+    /*partie gauche*/
+    .transcription{
+        width: 100%;
+    }
+    .transcription span{
+        font-size: 1.1em;
+        padding: 0 5px;
+    }
+    .par-gauche{
+        width: 100%;
+    }
+    /*partie droite... le savais-tu*/
+    .par-droite{
+        width: 100%;
+    }
+    /*Partie droite encore... mais la section réponse*/
+    .reponse{
+        width: 100%;
+    }
+}
+/**/
