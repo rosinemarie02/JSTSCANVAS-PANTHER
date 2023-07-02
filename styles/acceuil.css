@@ -1,0 +1,328 @@
+/*import, pour pas surchargé le même css avec les mêmes styles*/
+/*syles par défauts... navbar et footer*/
+@import url(../styles/external-libs/navigation.css);
+@import url(../styles/external-libs/footer.css);
+@import url(../styles/external-libs/par-défaut.css);
+/*et enfin l'animation slide*/
+@import url(../styles/external-libs/animation.css);
+/*import FONTS*/
+@font-face {
+    font-family: 'Titre H1';
+    src: url('../fonts/panthera.otf');
+}
+@font-face {
+    font-family: 'Titre H2';
+    src: url('../fonts/BEYNO.ttf');
+}
+@font-face {
+    font-family: 'Enigme';
+    src: url('../fonts/WakandaForever-Regular.ttf');
+}
+@font-face {
+    font-family: 'Texte';
+    src: url('../fonts/Cantarell-Regular.ttf');
+}
+
+h1{
+    font-family: 'Titre H1';
+    font-weight: normal;
+    font-size: 4.5em;
+    color: #DF99F2;
+}
+
+h2, h6{
+    font-family: 'Titre H2';
+    font-weight: normal;
+    font-size: 2.3em;
+    color: #DF99F2;
+}
+p{
+    font-family: 'Texte';
+    font-size: 1.1em;
+}
+q{
+    font-family: 'Texte';
+    font-size: 1em;
+    font-style: italic;
+}
+
+/*biographie*/
+h3{
+    font-family: 'Texte';
+    font-size: 2em;
+}
+
+/*formulaire*/
+h4{
+    font-family: 'Texte';
+    font-size: 3em;
+    margin: 0;
+    padding-bottom: 20px;
+}
+@media screen and (max-width: 700px){
+    h4{
+        font-size: 2em;
+        margin: 0;
+    }
+}
+/* arrière-plan de tout les page */
+body{
+    background: url('../images/Allpages/arrière_plan.png') no-repeat;
+    background-size: cover;
+    font-size: 15px;
+    color: white;
+    margin: 0;
+}
+/*style du footer*/
+footer{
+    background: url('../images/Allpages/back_footer.png') no-repeat;
+    background-size: cover;
+    z-index: 1;
+}
+/*Première section... intro*/
+#first{
+    background: url('../images/Accueil/Pantherhome1..png') top right/60% no-repeat;
+    height: 130vh;
+}
+.black-panther{
+    padding: 0 0;
+    margin: 0 5%;
+    width: 40%;
+}
+/*Deuxième section... genre de carte */
+.portrait{
+    display: flex;
+    background-color: #021740;
+    height: 40vh;
+}
+.personnage{
+    display: flex;
+}
+.text-b{
+    padding: 0% 5px;
+    text-align: justify;
+    font-size: .9em;
+}
+/*Troisième section*/
+.block{
+    margin: 5%;
+    display: flex;
+}
+.block-gauche{
+    width: 60%;
+    text-align: justify;
+}
+.block-droite{
+    width: 40%;
+}
+/*carte biographie de T'Challa*/
+.tchalla{
+    position: absolute;
+    top: -30%;
+    transform: translateX(20%);
+}
+.tchalla img{
+    width: 70%;
+}
+.bio{
+    padding: 50% 20px 10px 20px;
+}
+.bio h3{
+    text-align: center;
+}
+.descr{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+.descr p{
+    margin: 0 10px;
+    color: white;
+    background-color: #021740;
+    padding: 5px 35px;
+    border-radius: 7px;
+}
+.fond{
+    position: relative;
+    color: #021740;
+    background-color: white;
+    border-radius: 30px;
+    margin: 30% 10%;
+}
+.panther img{
+    width: 80%;
+}
+/*Formulaire*/
+#formulaire{
+    background: url('../images/Accueil/Pantherhome7.png')center no-repeat;
+    height: 100vh;
+    padding:  20% 25% 5% 25%;
+}
+.formulaire{
+    padding: 50px 0;
+    text-align: center;
+    background: linear-gradient(to bottom, white, transparent);
+    color: #021740;
+    border-radius: 70px;
+}
+input, textarea{
+    width: 90%;
+    margin: 5px 0;
+    padding: 10px 15px;
+    background-color: transparent;
+    border: 1px solid #021740;
+    border-radius: 30px;
+}
+textarea{
+    height: 155px;
+}
+::placeholder{
+    color: #021740;
+}
+.popup {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(2, 23, 64, 0.4509803922);
+    backdrop-filter: blur(7px);
+    padding: 20px;
+    border: 1px solid black;
+    text-align: center;
+    display: none;
+}
+.popup h2 {
+    margin-top: 35vh;
+}
+.popup button {
+    padding: 10px;
+    width: 100px;
+    margin-top: 25px;
+}
+  
+.error {
+    color: red;
+}
+/*boutton...*/
+.button{
+    margin: 5px 0;
+}
+button{
+    background-color: #F2CEF2;
+    border: none;
+    border-radius: 20px;
+    padding: 15px 45px;
+    transition: .5s all ease-in-out;
+    cursor: pointer;
+}
+button:hover{
+    filter: drop-shadow(0 0 20px #021740);
+}
+
+/*responsive*/
+@media screen and (max-width: 900px) {
+    /*Première section... intro*/
+    #first{
+        background: url('../images/Accueil/Pantherhome1..png') top center/80% no-repeat;
+        height: 130vh;
+    }
+    .black-panther{
+        text-align: center;
+        padding: 45% 15% 0 15%;
+        margin: 0;
+        width: 100%;
+    }
+    /*Deuxième section*/
+    #second{
+        display: none;
+    }
+    /*Troisième section*/
+    .block{
+        margin-top: 25%;
+        display: block;
+        padding: 5%;
+    }
+    .block-gauche{
+        padding: 0 5%;
+        width: 100%;
+    }
+    .block-droite{
+        width: 80%;
+        margin: 0 auto;
+    }
+    /*carte biographie de T'Challa*/
+    .tchalla{
+        position: absolute;
+        top: -40%;
+        transform: translateX(17%);
+    }
+    .tchalla img{
+        width: 90%;
+    }
+    .descr p{
+        padding: 2%;
+    }
+    .fond{
+        color: #021740;
+        margin: 50% 10%;
+    }
+    .panther img{
+        width: 80%;
+    }
+    /*Formulaire*/
+    #formulaire{
+        background: url('../images/Accueil/Pantherhome7.png')center no-repeat;
+        height: 170vh;
+        padding:  20% 15% 5% 15%;
+        z-index: 2;
+    }
+    .formulaire{
+        border-radius: 50px;
+    }
+    input, textarea{
+        padding: 10px 20px;
+    }
+    textarea{
+        height: 200px;
+    }
+    /*boutton...*/
+    .button{
+        margin: 5px 0;
+    }
+    button{
+        border-radius: 20px;
+        padding: 2% 5%;
+    }
+}
+@media screen and (max-width: 700px) {
+    .block-droite{
+        width: 100%;
+        margin: 0 auto;
+    }
+    /*carte biographie de T'Challa*/
+    .tchalla{
+        position: absolute;
+        top: -20%;
+        transform: translateX(17%);
+    }
+    .tchalla img{
+        width: 70%;
+    }
+    /*Formulaire*/
+    #formulaire{
+        background: url('../images/Accueil/Pantherhome7.png')center no-repeat;
+        height: 170vh;
+        padding:  20% 15% 5% 15%;
+    }
+    .formulaire{
+        border-radius: 50px;
+    }
+    input, textarea{
+        padding: 10px 20px;
+    }
+    textarea{
+        height: 200px;
+    }
+}

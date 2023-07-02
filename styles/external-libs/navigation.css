@@ -1,0 +1,114 @@
+/*barre de navigation... externe aussi comme les deux autres*/
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.nav-links ul li{
+    display: inline-block;
+    margin: 0 5px;
+    font-family: 'Titre H2';
+    font-size: 1.5em;
+}
+/*active et hover*/
+.nav-links a{
+    color: white;
+    transition: color 0.25s ease-out;
+}
+.nav-links a.active{
+    color: #9E91B7;
+}
+.nav-links a:hover{
+    color: #9E91B7;
+}
+.hover-underline{
+    display: inline-block;
+    position: relative;
+}
+.hover-underline::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #9E91B7;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+.hover-underline:hover::after{
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+/*logo colaboration*/
+.nav-logo{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.nav-logo img{
+    transition: filter .3s ease-in-out;
+}
+.nav-logo img:hover{
+    filter: grayscale(100%) brightness(70%) sepia(50%) hue-rotate(-100deg) saturate(250%) contrast(1);
+}
+/*position*/
+nav{
+    margin: 15px 70px;
+}
+
+/*scroll bar*/
+.scroll{
+    position: fixed;
+    top: 0;
+    left: 30px;
+    display: flex;
+}
+.line-n-1{
+    width: 3px;
+    height: 340px;
+    background: #9E91B7;
+}
+.line-n{
+    margin-left: 5px;
+}
+.media a img{
+    padding: 5px 0;
+    transition: .3s filter ease-in-out;
+}
+.media a img:hover{
+    filter: brightness(0) invert(1);
+}
+.line-n-2{
+    width: 3px;
+    height: 200px;
+    margin-left: 10px;
+    background: #9E91B7;
+}
+/*responsive*/
+@media screen and (min-width:650px) {
+    nav{
+        gap: 1%;
+    }    
+}
+@media screen and (min-width:720px) {
+    nav{
+        gap: 5%;
+    }    
+}
+@media screen and (min-width:800px) {
+    nav{
+        gap: 25%;
+    }    
+}
+@media screen and (min-width:800px) {
+    nav{
+        gap: 45%;
+    }    
+}
+@media screen and (min-width:1100px) {
+    nav{
+        gap: 55%;
+    }    
+}

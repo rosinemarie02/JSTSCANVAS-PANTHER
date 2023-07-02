@@ -1,0 +1,10 @@
+/* reset paramètre */
+*{
+    list-style: none;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+*:focus{
+    outline: none;
+}
