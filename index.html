@@ -4,22 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/acceuil.css">
+    <script defer src=".//script/myJs.js"></script>
     <title>Page d'Acceuil</title>
 </head>
 <body>
+    <div class="curseur"><img src="./images/logo_souris_BP1_blanc.png" width="30px" alt=""></div>
 <header>
-    <div class="scroll">
-        <div class="line-n-1"></div>
-        <div class="line-n">
-            <div class="line-n-2"></div>
-            <div class="media">
-                <div><a href=""><img src="./images/Allpages/icon_facebook.png" alt=""></a></div>
-                <div><a href=""><img src="./images/Allpages/icon_instagram.png" alt=""></a></div>
-                <div><a href=""><img src="./images/Allpages/icon_twitter.png" alt=""></a></div>
-                <div><a href=""><img src="./images/Allpages/icon_tiktok.png" alt=""></a></div>
-            </div>
-        </div>
-    </div>
     <nav>
         <div class="nav-logo">
             <div><img src="./images/Allpages/icon_SAYNA.png" alt=""></div>
@@ -34,15 +24,27 @@
             </ul>
         </div>
     </nav>
+    <div class="scroll">
+        <div class="line-n-1"></div>
+        <div class="line-n">
+            <div class="line-n-2"></div>
+            <div class="media">
+                <div><a href=""><img src="./images/Allpages/icon_facebook.png" alt=""></a></div>
+                <div><a href=""><img src="./images/Allpages/icon_instagram.png" alt=""></a></div>
+                <div><a href=""><img src="./images/Allpages/icon_twitter.png" alt=""></a></div>
+                <div><a href=""><img src="./images/Allpages/icon_tiktok.png" alt=""></a></div>
+            </div>
+        </div>
+    </div>
 </header>
 <main>
     <section id="first">
         <div class="black-panther">
-            <div class="titre">
+            <div class="titre scroll-anim">
                 <h1>BLACK PANTHER</h1>
                 <h6>WAKANDA FOREVER</h6>
             </div>
-            <div class="text-p">
+            <div class="text-p scroll-anim">
                 <p>
                     En plus d'être un film qui fait la part belle aux héroïnes, Black Panther rend
                     hommage aux cultures africaine et afro américaine. On y évoque le
@@ -53,7 +55,7 @@
             </div>
         </div>
     </section>
-    <section id="second">
+    <section id="second" class="scroll-anim">
         <div class="portrait">
             <div class="personnage">
                 <img src="./images/Accueil/Pantherhome2.png" alt="">
@@ -91,7 +93,7 @@
     <section id="third">
         <div class="block">
             <div class="block-gauche">
-                <div class="random-text">
+                <div class="random-text scroll-anim ">
                     <h2>Naissance d’un prince
                     </h2>
                     <p>
@@ -116,7 +118,7 @@
 
                     </p>
                 </div>
-                <div class="random-text">
+                <div class="random-text scroll-anim">
                     <h2>un heros vengeur
                     </h2>
                     <p>
@@ -140,7 +142,7 @@
                         T'Challa et T'Chaka
                     </p>
                 </div>
-                <div class="random-text">
+                <div class="random-text scroll-anim">
                     <h2>un heros PROTECTEUR ET JUSTICIER
                     </h2>
                     <p>
@@ -165,7 +167,7 @@
                 </div>
             </div>
             <div class="block-droite">
-                <div class="fond">
+                <div class="fond scroll-anim">
                     <div class="tchalla"><img src="./images/Accueil/Pantherhome5.png" alt=""></div>
                     <div class="bio">
                         <h3>T’Challa</h3>
@@ -190,15 +192,23 @@
         </div>
     </section>
     <section id="formulaire">
-        <div class="formulaire">
-            <div class="mini-title">
-                <p>Besoin de l’intervention du Wakanda ?</p>
-                <h4>Contactez nous !</h4>
+        <form>
+            <div class="formulaire scroll-anim">
+                <div class="mini-title ">
+                    <p>Besoin de l’intervention du Wakanda ?</p>
+                    <h4>Contactez nous !</h4>
+                </div>
+                <div class="input"><input type="text" placeholder="Nom" id="nom"></div>
+                <div class="input"><input type="text" placeholder="Email" id="email"></div>
+                <div class="input"><textarea name="" placeholder="Message" id="message"></textarea></div>
+                <div class="button"><button type="button" onclick="return showPopup()">ENVOYER</button></div>
+                <div id="error" class="error" style="display: none;">Veuillez remplir les champs ci-dessus avant de soumettre.</div>
             </div>
-            <div class="input"><input type="text" placeholder="Nom"></div>
-            <div class="input"><input type="text" placeholder="Email"></div>
-            <div class="input"><textarea name="" placeholder="Message"></textarea></div>
-            <div class="button"><button type="button">ENVOYER</button></div>
+        </form>
+        <div id="popup" class="popup">
+            <h2>Merci à vous!</h2>
+            <p>Nous apprécions votre interêt.</p>
+            <button onclick="closePopup()">FERMEZ</button>
         </div>
     </section>
 </main>

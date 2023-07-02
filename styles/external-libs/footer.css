@@ -1,8 +1,3 @@
-/*style du footer*/
-footer{
-    background: url('../images/Allpages/back_footer.png') no-repeat;
-    background-size: cover;
-}
 .blocus{
     display: flex;
     justify-content: center;

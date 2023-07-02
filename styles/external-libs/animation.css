@@ -1,24 +1,63 @@
 nav, main, footer{
-    animation: entrer .7s ease-out;
+    animation: left-right .7s ease-out;
 }
 .scroll{
-    animation: scroll .5s ease-out 1s;
+    animation: top-bottom 0.7s ease-in 1s, display 1.3s ease;
 }
-@keyframes entrer {
-    0%{
-        transform: translateX(-15%);
-    }
-    100%{
-        transform: translateX(0);
+
+@keyframes left-right {
+    from {
+      transform: translateX(-20%);
+      filter: blur(2px);
     }
 }
 
-@keyframes scroll {
-    0%{
-        transform: translateY(-35%);
-        opacity: 0;
+@keyframes display {
+    from {
+      opacity: 0;
     }
-    100%{
-        transform: translateY(0);
+    to {
+      opacity: 0;
     }
+}
+  
+@keyframes top-bottom {
+    from {
+      transform: translateY(-100%);
+      filter: blur(2px);
+    }
+}
+/* animation scroll  */
+.scroll-anim{
+  transform: translateX(-50%);
+  filter: blur(5px);
+  opacity: 0;
+  transition: 0.7s all;
+}
+.apparition{
+  transform: translateX(0);
+  filter: blur(0);
+  opacity: 1;
+}
+.curseur {
+  position: absolute;
+  transition-duration: 200ms;
+  transition-timing-function: ease-out;
+}
+.extention {
+  animation: cursorClick 0.5s forwards;
+}
+
+@keyframes cursorClick {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(3);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+    filter: blur(5px);
+  }
 }
