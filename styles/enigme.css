@@ -163,70 +163,134 @@ footer{
     margin: 15% 0;
 }
 
-/*seconde partie*/
-#second{
-    display: flex;
-    margin: 5%;
-}
-/*texte enigmatique*/
-.text-enigme{
-    color: #DF99F2;
-    font-size: 2.3em;
-}
-span{
-    font-family: 'Enigme';
-}
-/*partie gauche*/
-.transcription{
-    width: 70%;
-}
-.transcription span{
-    font-size: 1.1em;
-    padding: 0 5px;
-}
-.par-gauche{
-    width: 60%;
-}
-/*partie droite... le savais-tu*/
-.par-droite{
-    text-align: center;
-    align-items: center;
-    width: 40%;
-}
-.question{
-    background: url('../images/Enigme/Pantherenigme2.png') center/90% no-repeat;
-    padding: 5% 10%;
+/* Second section */
+#second {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 0 10px 0 13%;
 }
 
-/*Partie droite encore... mais la section réponse*/
-.reponse{
-    width: 50%;
+.left {
+  width: 35%;
+  margin-right: 5%;
 }
-.reponse input{
-    background-color: transparent;
-    border: 2px solid #F2CEF2;
-    padding: 10px 15px;
-    border-radius: 30px;
-    width: 100%;
+
+.right {
+  width: 50%;
+  margin-left: 5%;
 }
-::placeholder{
-    color: #F2CEF2;
+
+button {
+  font-family: "texte";
+  width: 155px;
+  padding: 10px 0;
+  border-radius: 38px;
+  margin: 7px 0;
+  background-color: var(--button);
+  border: none;
+  cursor: pointer;
+  transition: 0.25s all ease-out;
 }
-/**/
-.button{
-    text-align: center;
+
+button:hover {
+  filter: drop-shadow(0 0 7px #F2CEF2);
+  color: var(--general);
 }
-button{
-    background-color: #F2CEF2;
-    border: none;
-    border-radius: 20px;
-    padding: 4% 10%;
-    margin: 5% 0;
-    transition: .5s all ease-in-out;
+
+.description {
+  text-align: justify;
 }
-button:hover{
-    filter: drop-shadow(0 0 7px #F2CEF2);
+
+.description h2 {
+  text-decoration: underline;
 }
+
+.whut {
+  font-size: 1.2em;
+}
+
+.important {
+  font-family: "texte";
+  font-size: 0.9em;
+}
+
+.enigme input {
+  background: transparent;
+  padding: 10px;
+  margin: 5px 0;
+  border: 2px solid var(--button);
+  border-radius: 25px;
+  max-width: 400px;
+  width: 100%;
+  color: #F2CEF2;
+}
+
+.enigme input::placeholder {
+  color: var(--button);
+}
+
+.enigme input:focus {
+  outline: none;
+}
+
+.question {
+  margin: 25px 0;
+}
+
+.wut {
+  font-size: 1.5em;
+  word-spacing: 10px;
+  color: var(--pinky);
+}
+
+.hint {
+  text-align: center;
+  padding: 120px 5px;
+}
+
+.popup {
+  z-index: 2;
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  text-align: center;
+}
+
+#congratsPopup {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(17, 33, 63, 0.368627451);
+  backdrop-filter: blur(5px);
+}
+
+#secondPopup {
+  min-width: 250px;
+  width: 30%;
+  height: max-content;
+  padding: 25px;
+  background: linear-gradient(to bottom, var(--button), var(--general));
+}
+
+#secondPopup span {
+  font-family: "texte";
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+#secondPopup .figma {
+  display: flex;
+  justify-content: center;
+  text-align: left;
+}
+
+#secondPopup .figma .txt {
+  margin-left: 5px;
+}
+
 /*responsive*/
 @media screen and (max-width: 900px) {
     /*Première section*/
