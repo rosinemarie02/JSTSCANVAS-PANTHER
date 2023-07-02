@@ -1,43 +1,80 @@
+@font-face {
+    font-family: 'Titre H1';
+    src: url('/fonts/panthera.otf');
+}
+@font-face {
+    font-family: 'Titre H2';
+    src: url('/fonts/BEYNO.ttf');
+}
+@font-face {
+    font-family: 'Enigme';
+    src: url('/fonts/WakandaForever-Regular.ttf');
+}
+@font-face {
+    font-family: 'Texte';
+    src: url('/fonts/Cantarell-Regular.ttf');
+}
+
+h1{
+    font-family: 'Titre H1';
+    font-weight: normal;
+    font-size: 4.5em;
+    color: #DF99F2;
+}
+
+h2, h6{
+    font-family: 'Titre H2';
+    font-weight: normal;
+    font-size: 2.3em;
+    color: #DF99F2;
+}
+p{
+    font-family: 'Texte';
+    font-size: 1.1em;
+}
+q{
+    font-family: 'Texte';
+    font-size: 1em;
+    font-style: italic;
+}
+
+/*biographie*/
+h3{
+    font-family: 'Texte';
+    font-size: 2em;
+}
+
+/*formulaire*/
+h4{
+    font-family: 'Texte';
+    font-size: 3em;
+    margin: 0;
+    padding-bottom: 20px;
+}
+@media screen and (max-width: 700px){
+    h4{
+        font-size: 2em;
+        margin: 0;
+    }
+}
 /*import, pour pas surchargé le même css avec les mêmes styles*/
 /*syles par défauts... navbar et footer*/
-@import "/styles/external-libs/par-défaut.css";
-@import "/styles/external-libs/footer.css";
-@import "/styles/external-libs/navigation.css";
-/*fonts... */
-@import "/styles/external-libs/fonts.css";
+@import "../styles/external-libs/par-défaut.css";
+@import "../styles/external-libs/footer.css";
+@import "../styles/external-libs/navigation.css";
 /*et enfin l'animation slide*/
-@import "/styles/external-libs/animation.css";
-/*scroll bar*/
-.scroll{
-    position: fixed;
-    top: 0;
-    left: 30px;
-    display: flex;
-}
-.line-n-1{
-    width: 3px;
-    height: 340px;
-    background: #9E91B7;
-}
-.line-n{
-    margin-left: 5px;
-}
-.media a img{
-    padding: 5px 0;
-    transition: .3s filter ease-in-out;
-}
-.media a img:hover{
-    filter: brightness(0) invert(1);
-}
-.line-n-2{
-    width: 3px;
-    height: 200px;
-    margin-left: 10px;
-    background: #9E91B7;
+@import "../styles/external-libs/animation.css";
+/* arrière-plan de tout les page */
+body{
+    background: url('/images/Allpages/arrière_plan.png') no-repeat;
+    background-size: cover;
+    font-size: 15px;
+    color: white;
+    margin: 0;
 }
 /*Première section... intro*/
 #first{
-    background: url('/images/Accueil/Pantherhome1..png') top right/60% no-repeat;
+    background: url('../images/Accueil/Pantherhome1..png') top right/60% no-repeat;
     height: 130vh;
 }
 .black-panther{
@@ -110,7 +147,7 @@
 }
 /*Formulaire*/
 #formulaire{
-    background: url('/images/Accueil/Pantherhome7.png')center no-repeat;
+    background: url('../images/Accueil/Pantherhome7.png')center no-repeat;
     height: 100vh;
     padding:  20% 25% 5% 25%;
 }
@@ -155,7 +192,7 @@ button:hover{
 @media screen and (max-width: 900px) {
     /*Première section... intro*/
     #first{
-        background: url('/images/Accueil/Pantherhome1..png') top center/80% no-repeat;
+        background: url('../images/Accueil/Pantherhome1..png') top center/80% no-repeat;
         height: 130vh;
     }
     .black-panther{
@@ -203,7 +240,7 @@ button:hover{
     }
     /*Formulaire*/
     #formulaire{
-        background: url('/images/Accueil/Pantherhome7.png')center no-repeat;
+        background: url('../images/Accueil/Pantherhome7.png')center no-repeat;
         height: 170vh;
         padding:  20% 15% 5% 15%;
     }
@@ -241,7 +278,7 @@ button:hover{
     }
     /*Formulaire*/
     #formulaire{
-        background: url('/images/Accueil/Pantherhome7.png')center no-repeat;
+        background: url('..F/images/Accueil/Pantherhome7.png')center no-repeat;
         height: 170vh;
         padding:  20% 15% 5% 15%;
     }

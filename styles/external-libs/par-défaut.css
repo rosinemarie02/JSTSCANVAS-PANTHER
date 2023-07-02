@@ -8,12 +8,3 @@
 *:focus{
     outline: none;
 }
-
-/* arrière-plan de tout les page */
-body{
-    background: url('/images/Allpages/arrière_plan.png') no-repeat;
-    background-size: cover;
-    font-size: 15px;
-    color: white;
-    margin: 0;
-}

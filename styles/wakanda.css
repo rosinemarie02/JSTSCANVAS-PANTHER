@@ -1,16 +1,81 @@
+@font-face {
+    font-family: 'Titre H1';
+    src: url('/fonts/panthera.otf');
+}
+@font-face {
+    font-family: 'Titre H2';
+    src: url('/fonts/BEYNO.ttf');
+}
+@font-face {
+    font-family: 'Enigme';
+    src: url('/fonts/WakandaForever-Regular.ttf');
+}
+@font-face {
+    font-family: 'Texte';
+    src: url('/fonts/Cantarell-Regular.ttf');
+}
+
+h1{
+    font-family: 'Titre H1';
+    font-weight: normal;
+    font-size: 4.5em;
+    color: #DF99F2;
+}
+
+h2, h6{
+    font-family: 'Titre H2';
+    font-weight: normal;
+    font-size: 2.3em;
+    color: #DF99F2;
+}
+p{
+    font-family: 'Texte';
+    font-size: 1.1em;
+}
+q{
+    font-family: 'Texte';
+    font-size: 1em;
+    font-style: italic;
+}
+
+/*biographie*/
+h3{
+    font-family: 'Texte';
+    font-size: 2em;
+}
+
+/*formulaire*/
+h4{
+    font-family: 'Texte';
+    font-size: 3em;
+    margin: 0;
+    padding-bottom: 20px;
+}
+@media screen and (max-width: 700px){
+    h4{
+        font-size: 2em;
+        margin: 0;
+    }
+}
+
 /*import, pour pas surchargé le même css avec les mêmes styles*/
 /*syles par défauts... navbar et footer*/
-@import "/styles/external-libs/par-défaut.css";
-@import "/styles/external-libs/footer.css";
-@import "/styles/external-libs/navigation.css";
-/*fonts... */
-@import "/styles/external-libs/fonts.css";
+@import "../styles/external-libs/par-défaut.css";
+@import "../styles/external-libs/footer.css";
+@import "../styles/external-libs/navigation.css";
 /*et enfin l'animation slide*/
-@import "/styles/external-libs/animation.css";
-
+@import "../styles/external-libs/animation.css";
+/* arrière-plan de tout les page */
+body{
+    background: url('/images/Allpages/arrière_plan.png') no-repeat;
+    background-size: cover;
+    font-size: 15px;
+    color: white;
+    margin: 0;
+}
 /*First section*/
 #first{
-    background: url('/images/Wakanda/Pantherwakanda1.png') no-repeat;
+    background: url('../images/Wakanda/Pantherwakanda1.png') no-repeat;
     background-size: cover;
     height: 100vh;
 }
@@ -22,7 +87,7 @@
 /*Second section*/
 #second{
     display: flex;
-    background: url('/images/Wakanda/Pantherwakanda2.png') top center/100% no-repeat;
+    background: url('../images/Wakanda/Pantherwakanda2.png') top center/100% no-repeat;
     margin: 5%;
     gap: 5%;
     text-align: justify;

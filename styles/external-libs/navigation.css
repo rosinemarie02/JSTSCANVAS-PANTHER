@@ -58,6 +58,34 @@ nav{
     margin: 15px 70px;
 }
 
+/*scroll bar*/
+.scroll{
+    position: fixed;
+    top: 0;
+    left: 30px;
+    display: flex;
+}
+.line-n-1{
+    width: 3px;
+    height: 340px;
+    background: #9E91B7;
+}
+.line-n{
+    margin-left: 5px;
+}
+.media a img{
+    padding: 5px 0;
+    transition: .3s filter ease-in-out;
+}
+.media a img:hover{
+    filter: brightness(0) invert(1);
+}
+.line-n-2{
+    width: 3px;
+    height: 200px;
+    margin-left: 10px;
+    background: #9E91B7;
+}
 /*responsive*/
 @media screen and (min-width:650px) {
     nav{

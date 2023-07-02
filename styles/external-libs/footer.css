@@ -1,6 +1,6 @@
 /*style du footer*/
 footer{
-    background: url('/images/Allpages/back_footer.png') no-repeat;
+    background: url('../images/Allpages/back_footer.png') no-repeat;
     background-size: cover;
 }
 .blocus{
