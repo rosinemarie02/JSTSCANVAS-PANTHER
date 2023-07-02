@@ -1,2 +1,4 @@
 # JSTSCANVAS-PANTHER
-Module : JS&amp;TS&amp;Canvas Évaluation - Black Panther
+
+Module : JavaScript/TypeScript/Canvas 
+Évaluation - Black Panther
